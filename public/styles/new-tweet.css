@@ -24,7 +24,7 @@ textarea {
 }
 article {
   margin-top: 20px;
-  margin-bottom: 100px;
+  margin-bottom: 25px;
   border: 4px #545149 solid;
   padding: 5px;
 }
@@ -42,6 +42,11 @@ article header {
   font-weight: lighter;
   justify-content: space-between;
   padding: 10px 10px 30px 10px;
+}
+
+article header div {
+  display: flex;
+  align-items: center;
 }
 article footer {
   display: flex;
