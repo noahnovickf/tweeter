@@ -8,7 +8,11 @@ nav {
   color: #ffffff;
   padding: 1.5em;
 }
-
 span {
+  float: right;
+}
+
+#logo {
   font-family: "Bungee", sans-serif;
+  float: left;
 }
