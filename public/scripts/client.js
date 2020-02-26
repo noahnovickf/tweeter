@@ -42,8 +42,18 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
   loadTweets();
+
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
+    if ($("textarea").val().length > 140) {
+      $(".error").text("WHY ARE YOU TALKING SO MUCH???");
+      $("textarea").val("");
+      $(".counter").text(140);
+      return;
+    } else if ($("textarea").val().length === 0) {
+      $(".error").text("WHY SO SHY???");
+      return;
+    }
     $.ajax({
       url: "/tweets/",
       type: "POST",
@@ -52,6 +62,7 @@ $(document).ready(function() {
         loadTweets();
         $("textarea").val("");
         $(".counter").text(140);
+        $(".error").text("");
       }
     });
   });

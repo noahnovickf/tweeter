@@ -35,6 +35,7 @@ article main {
   font-weight: normal;
   border-bottom: 3px #545149 solid;
   padding-bottom: 5px;
+  word-break: break-word;
 }
 
 article header {
