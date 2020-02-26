@@ -22,3 +22,7 @@ textarea {
 .new-tweet {
   display: none;
 }
+
+.error {
+  display: none;
+}

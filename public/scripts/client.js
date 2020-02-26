@@ -54,11 +54,14 @@ $(document).ready(function() {
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
     if ($("textarea").val().length > 140) {
-      $(".error").text("WHY ARE YOU TALKING SO MUCH???");
-      $(".counter").text(140);
+      $(".error")
+        .text("WHY ARE YOU TALKING SO MUCH???")
+        .fadeIn(300);
       return;
     } else if ($("textarea").val().length === 0) {
-      $(".error").text("WHY SO SHY???");
+      $(".error")
+        .text("WHY SO SHY???")
+        .fadeIn(300);
       return;
     }
     $.ajax({
