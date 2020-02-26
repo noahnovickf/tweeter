@@ -3,7 +3,6 @@ body > header {
   margin-top: 75px;
   height: 400px;
   width: 100%;
-  position: absolute;
   background-color: coral;
   position: relative;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
@@ -16,4 +15,11 @@ header img {
 
 header div {
   text-align: center;
+}
+
+h2 {
+  font-weight: normal;
+}
+h2 span {
+  font-weight: bold;
 }

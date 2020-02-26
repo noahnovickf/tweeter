@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+//<script>alert('a')</script>
+//const safeHTML = `<main>${escape(textFromUser)}</main>`;
 
 const loadTweets = function() {
   $.ajax({
@@ -31,13 +33,19 @@ const createTweetElement = function(tweet) {
   </div>
 <span class="appear">${tweet.user.handle}</span>
 </header>
-<main>${tweet.content.text}</main>
+<main>${escape(tweet.content.text)}</main>
 <footer>
 <span>${Math.round((Date.now() - tweet.created_at) / 86400000)} days ago</span>
 <span>share</span>
 </footer>`;
   $tweet.append(html);
   return $tweet;
+};
+
+const escape = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
 };
 
 $(document).ready(function() {
@@ -64,5 +72,9 @@ $(document).ready(function() {
         $(".error").text("");
       }
     });
+  });
+  $(".new-button").click(() => {
+    $(".new-tweet").slideToggle("slow");
+    $(".new-tweet textarea").focus();
   });
 });

@@ -18,3 +18,7 @@ textarea {
   float: right;
   font-family: "Bungee", sans-serif;
 }
+
+.new-tweet {
+  display: none;
+}

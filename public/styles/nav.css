@@ -1,4 +1,6 @@
 nav {
+  display: flex;
+  justify-content: space-between;
   top: 0;
   position: fixed;
   height: 75px;
@@ -8,11 +10,20 @@ nav {
   color: #ffffff;
   padding: 1.5em;
 }
-nav span {
-  float: right;
-}
 
 #logo {
   font-family: "Bungee", sans-serif;
   float: left;
+}
+
+.new-button {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+
+#down-arrow {
+  height: 20px;
+  width: 20px;
+  position: absolute;
 }
