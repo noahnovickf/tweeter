@@ -31,15 +31,25 @@ $(document).ready(function() {
     }
   ];
 
-  //get tweet info and then push the object into the data variable above
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
     $.ajax({
-      url: "/tweets",
+      url: "/tweets/",
       type: "POST",
-      data: $("#new-tweet").serialize()
+      data: $("textarea").serialize()
     });
+    loadTweets();
   });
+  const loadTweets = function() {
+    $.ajax({
+      url: "/tweets",
+      type: "GET",
+      data: "JSON"
+    }).then(response => {
+      const renderedTweets = renderTweets(response.data);
+      return renderedTweets;
+    });
+  };
 
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
