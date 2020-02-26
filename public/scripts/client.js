@@ -51,6 +51,7 @@ $(document).ready(function() {
       success: function() {
         loadTweets();
         $("textarea").val("");
+        $(".counter").text(140);
       }
     });
   });
