@@ -31,13 +31,20 @@ $(document).ready(function() {
     }
   ];
 
+  //get tweet info and then push the object into the data variable above
+  $("#new-tweet").submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: $("#new-tweet").serialize()
+    });
+  });
+
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       $("#tweet-list").append(createTweetElement(tweet));
     }
-    // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
   };
 
   const createTweetElement = function(tweet) {
