@@ -47,7 +47,6 @@ $(document).ready(function() {
     event.preventDefault();
     if ($("textarea").val().length > 140) {
       $(".error").text("WHY ARE YOU TALKING SO MUCH???");
-      $("textarea").val("");
       $(".counter").text(140);
       return;
     } else if ($("textarea").val().length === 0) {
