@@ -36,15 +36,23 @@ body {
     margin-right: 15px;
   }
 
-  #wrap-text > header {
+  body #wrap-text > header {
     background-color: coral;
     background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
     align-self: flex-start;
     margin-right: 5%;
     margin-left: 5%;
-    /* flex-grow: 1; */
+    flex-grow: 1;
+    width: initial;
+    transition-property: all 2s;
   }
-  #wrap-text > main {
+  body #wrap-text > main {
     flex-grow: 3;
+    width: initial;
+  }
+  body nav {
+    transition: background-color 1s;
+    background-color: initial;
+    background-color: #4056a1;
   }
 }

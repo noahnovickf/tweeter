@@ -6,9 +6,11 @@ nav {
   height: 75px;
   width: 100vw;
   z-index: 2;
-  background-color: #4056a1;
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
   color: #ffffff;
   padding: 1.5em;
+  background-color: coral;
+  transition: background-color 1s;
 }
 
 #logo {
