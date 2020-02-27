@@ -36,7 +36,7 @@ const createTweetElement = function(tweet) {
 <main>${escape(tweet.content.text)}</main>
 <footer>
 <span>${Math.round((Date.now() - tweet.created_at) / 86400000)} days ago</span>
-<span>share</span>
+<span id="share-icon"><i class="fas fa-flag"><i class="fas fa-retweet"></i></i><i class="fas fa-heart"></i></span>
 </footer>`;
   $tweet.append(html);
   return $tweet;
@@ -54,12 +54,14 @@ $(document).ready(function() {
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
     if ($("textarea").val().length > 140) {
-      $(".error")
+      $(".error2").text("");
+      $(".error1")
         .text("WHY ARE YOU TALKING SO MUCH???")
         .fadeIn(300);
       return;
     } else if ($("textarea").val().length === 0) {
-      $(".error")
+      $(".error1").text("");
+      $(".error2")
         .text("WHY SO SHY???")
         .fadeIn(300);
       return;

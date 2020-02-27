@@ -23,6 +23,14 @@ textarea {
   display: none;
 }
 
-.error {
+.error1 {
   display: none;
+  color: red;
+  font-family: "Bungee", sans-serif;
+}
+
+.error2 {
+  display: none;
+  color: red;
+  font-family: "Bungee", sans-serif;
 }

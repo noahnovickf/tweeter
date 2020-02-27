@@ -53,3 +53,9 @@ article:hover .appear {
   color: #545149;
   font-weight: lighter;
 }
+
+#share-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

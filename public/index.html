@@ -24,6 +24,10 @@
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/746b2f3e9e.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -44,11 +48,11 @@
         /></span>
       </button>
     </nav>
+      <div id="wrap-text">
     <header>
       <div>
-        <img src="/images/profile-hex.png" />
+        <img id="profile-pic" src="/images/profile-hex.png" />
       </div>
-      <br />
       <div>
         <h2><span>Noah</span> Novick</h2>
       </div>
@@ -63,12 +67,14 @@
             placeholder="What are you humming about?"
           ></textarea>
           <input class="btn" type="submit" value="Tweet" />
-          <span class="error"></span>
-
+          <span class="error1"></span>
+          <span class="error2"></span>
           <span class="counter">140</span>
         </form>
       </section>
-      <section id="tweet-list"></section>
+      
+        <section id="tweet-list"></section>
+      </div>
     </main>
   </body>
 </html>

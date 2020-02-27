@@ -27,3 +27,18 @@ nav {
   width: 20px;
   position: absolute;
 }
+
+#down-arrow {
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
