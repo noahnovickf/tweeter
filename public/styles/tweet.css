@@ -55,7 +55,11 @@ article:hover .appear {
 }
 
 #share-icon {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
+}
+
+article:hover #share-icon {
+  display: flex;
 }

@@ -1,11 +1,4 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-//<script>alert('a')</script>
-//const safeHTML = `<main>${escape(textFromUser)}</main>`;
-
+//GETs data from tweets
 const loadTweets = function() {
   $.ajax({
     url: "/tweets",
@@ -17,13 +10,14 @@ const loadTweets = function() {
     }
   });
 };
+//renders tweets on the page
 const renderTweets = function(tweets) {
   $("#tweet-list").empty();
   for (let tweet of tweets) {
     $("#tweet-list").prepend(createTweetElement(tweet));
   }
 };
-
+//creates tweet element that sets framework for displayed tweets
 const createTweetElement = function(tweet) {
   let $tweet = $("<article>").addClass("tweet");
   const html = `<header>
@@ -41,16 +35,16 @@ const createTweetElement = function(tweet) {
   $tweet.append(html);
   return $tweet;
 };
-
+//protects against malicious tweets altering the HTML
 const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
+//everything after this will ocur after the page is loaded
 $(document).ready(function() {
   loadTweets();
-
+  //when submit button is hit, checks to see if tweet is valid and posts tweets for loadTweet function to get
   $("#new-tweet").submit(function(event) {
     event.preventDefault();
     if ($("textarea").val().length > 140) {
@@ -81,6 +75,7 @@ $(document).ready(function() {
       }
     });
   });
+  //toggle new tweet button
   $(".new-button").click(() => {
     $(".new-tweet").slideToggle("slow");
     $(".new-tweet textarea").focus();

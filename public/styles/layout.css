@@ -53,7 +53,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 900px) {
   #wrap-text {
     display: flex;
     margin-top: 100px;
@@ -68,7 +68,6 @@ body {
     margin-left: 5%;
     flex-grow: 1;
     width: initial;
-    transition: width 1s;
   }
   body #wrap-text > main {
     flex-grow: 3;

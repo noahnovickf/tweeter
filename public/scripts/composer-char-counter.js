@@ -1,3 +1,4 @@
+// function to change the counterwhile typing in textarea
 $(document).ready(function() {
   const max = 140;
   $("textarea").keyup(function() {
