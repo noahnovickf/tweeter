@@ -65,6 +65,9 @@ $(document).ready(function() {
         .text("WHY SO SHY???")
         .fadeIn(300);
       return;
+    } else {
+      $(".error2").text("");
+      $(".error1").text("");
     }
     $.ajax({
       url: "/tweets/",

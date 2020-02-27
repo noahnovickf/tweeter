@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $(".new-button").addClass("show2");
   $(document).scroll(function() {
     if ($(document).scrollTop() > 400) {
       $(".topbtn").addClass("show");
