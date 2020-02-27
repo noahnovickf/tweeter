@@ -22,15 +22,16 @@ nav {
   color: white;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  display: none;
 }
-
+.show2 {
+  display: block;
+}
 #down-arrow {
   height: 20px;
   width: 20px;
   position: absolute;
-}
-
-#down-arrow {
   animation: bounce 0.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;

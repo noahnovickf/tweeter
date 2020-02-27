@@ -24,7 +24,31 @@ body {
   font-size: 24px;
   font-family: "Source Sans Pro", sans-serif;
 }
+.topbtn {
+  border: none;
+  background-color: transparent;
+  position: fixed;
+  z-index: 1000;
+  right: 15px;
+  bottom: 30px;
+  transform: rotate(180deg);
+  opacity: 0.2;
+  transition: opacity 0.5s;
+  display: none;
+}
+.show:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+.show {
+  display: block;
+}
 
+#up-arrow {
+  width: 50px;
+  height: 50px;
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -44,7 +68,7 @@ body {
     margin-left: 5%;
     flex-grow: 1;
     width: initial;
-    transition-property: all 2s;
+    transition: width 1s;
   }
   body #wrap-text > main {
     flex-grow: 3;
