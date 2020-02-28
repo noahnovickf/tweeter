@@ -53,7 +53,11 @@ $(document).ready(function() {
         .text("WHY ARE YOU TALKING SO MUCH???")
         .fadeIn(300);
       return;
-    } else if ($("textarea").val().length === 0) {
+    } else if (
+      $("textarea")
+        .val()
+        .trim().length === 0
+    ) {
       $(".error1").text("");
       $(".error2")
         .text("WHY SO SHY???")
